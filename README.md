@@ -149,7 +149,7 @@ Body:
 
 Once this request hits the server, we can initiate the logic behind the endpoint which would insert the email to the queues mentioned in the section above. The sender service will take care of everything after. We can return a 200 success if the email has been queued up correctly.
 
-Based on my limited knowledge of mail servers (I don't know if emails are broadcasted to the recipient or if the recipient mail server polls new emails). The opened endpoint is pretty straight forward, we just attach the webhook to the email so that on load, it initiates a GET request to an endpoint to update the email status. Something like this could look like:
+Based on my limited knowledge of mail servers (I don't know if emails are broadcasted to the recipient or if the recipient mail server polls for new emails). The "opened" endpoint is pretty straight forward, we just attach the webhook to the email so that on load, it initiates a GET request to an endpoint to update the email status. Something like this could look like:
 
 ```
 GET /api/email/{id}/open
@@ -157,7 +157,7 @@ GET /api/email/{id}/open
 Where "id" is the ID of the email being opened.
 ```
 
-When it comes to flagging the email as successfully "receieved", I'm not too sure how we could do this without researching more about how email servers work and how we a service like mailchimp can guarantee that an email has been received, not gone to junk, etc.
+When it comes to flagging the email as successfully "receieved", I'm not too sure how we could do this without me researching more about how mail servers work and how a service like mailchimp can guarantee that an email has been received, not gone to junk, etc.
 
 ## Load Balancing
 
