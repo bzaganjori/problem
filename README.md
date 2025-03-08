@@ -163,7 +163,7 @@ When it comes to flagging the email as successfully "receieved", I'm not too sur
 
 We can utilize classic load balancing to distribute our traffic across multiple servers. This will help when the services are overloaded or if one of our servers is down. The same email would not get added to two different services and we can distribute our work even further.
 
-### High-level application diagram
+# High-level application diagram
 
 <div style="text-align: center;">
    <img src="images/general.drawio.png" alt="My Image" />
