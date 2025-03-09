@@ -46,7 +46,7 @@ Table: "EMAILS"
 - CREATE_DATE_TIME
 ```
 
-Since we can upload multiple attachements to a single email, we'll need a way to reference these attachments. We can create a table that stores attachments with a reference to the EMAIL.ID field so that we know what email the attachement is a part of.
+Since we can upload one attachement to a single email, we'll need a way to reference the attachments. We can create a table that stores attachments with a reference to the EMAIL.ID field so that we know what email the attachement is a part of.
 
 ```
 Table: "ATTACHMENTS"
